@@ -17,3 +17,25 @@ document.getElementById("bookingForm").addEventListener("submit", function (e) {
   message.style.color = "green";
   this.reset();
 });
+/* Scroll Reveal Animation */
+const animatedItems = document.querySelectorAll(".animate");
+
+window.addEventListener("scroll", () => {
+  animatedItems.forEach(item => {
+    const position = item.getBoundingClientRect().top;
+    const screenHeight = window.innerHeight;
+
+    if (position < screenHeight - 100) {
+      item.classList.add("show");
+    }
+  });
+});
+
+/* Dark Mode Toggle */
+const darkBtn = document.getElementById("darkToggle");
+
+if (darkBtn) {
+  darkBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+  });
+}

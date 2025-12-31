@@ -143,3 +143,96 @@ footer {
     justify-content: space-between;
   }
 }
+/* ===== Scroll Animations ===== */
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover lift effect */
+.card,
+.special-card,
+.gallery-box {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.special-card:hover,
+.gallery-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ===== Dark Mode ===== */
+.dark-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: white;
+}
+
+body.dark {
+  background: #121212;
+  color: #eaeaea;
+}
+
+body.dark header,
+body.dark footer {
+  background: #000;
+}
+
+body.dark section,
+body.dark .card,
+body.dark .special-card,
+body.dark .gallery-box {
+  background: #1e1e1e;
+}
+
+body.dark a {
+  color: #ffcccb;
+}
+/* ===== Image Based Cards ===== */
+.food-gallery {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  margin-top: 2rem;
+}
+
+.image-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.image-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.image-card h3 {
+  margin: 1rem 0 0.5rem;
+}
+
+.image-card p {
+  padding: 0 1rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .image-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
