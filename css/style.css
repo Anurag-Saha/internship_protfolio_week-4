@@ -2,31 +2,32 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-  font-family: Arial, sans-serif;
   line-height: 1.6;
+  background: #fafafa;
+}
+
+header {
+  background: #8b0000;
+  color: white;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
-  background: #222;
-}
-
-.logo {
-  color: #fff;
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
+  list-style: none;
 }
 
 .nav-links li {
-  margin-left: 1rem;
+  margin-left: 15px;
 }
 
 .nav-links a {
@@ -35,61 +36,45 @@ body {
 }
 
 .hero {
-  position: relative;
   text-align: center;
-  left: auto;
-  right: inherit;
-}
-
-.hero img {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-}
-
-.hero-text {
-  padding: 2rem;
+  padding: 4rem 1rem;
+  background: #f4e1d2;
 }
 
 .btn {
   display: inline-block;
-  padding: 0.5rem 1rem;
-  background: #007bff;
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background: #8b0000;
   color: white;
   text-decoration: none;
 }
 
-.page-section {
+.highlights {
+  display: flex;
+  flex-direction: column;
   padding: 2rem;
 }
 
-.feature-grid {
-  display: grid;
-  gap: 1rem;
-}
-
-.services-list {
-  list-style: square;
-  margin-left: 1.5rem;
-}
-
-form {
-  max-width: 400px;
-}
-
-label {
-  display: block;
+.card {
+  background: white;
+  padding: 1.5rem;
   margin-bottom: 1rem;
+  border-radius: 5px;
 }
 
-input, textarea {
+.content {
+  padding: 2rem;
+}
+
+form input, button {
   width: 100%;
-  padding: 0.5rem;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
 button {
-  padding: 0.7rem;
-  background: #28a745;
+  background: #8b0000;
   color: white;
   border: none;
 }
@@ -99,12 +84,62 @@ footer {
   padding: 1rem;
   background: #222;
   color: white;
-  margin-top: 2rem;
 }
 
-/* Responsive */
 @media (min-width: 768px) {
-  .feature-grid {
+  .highlights {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+
+.specials, .gallery, .why-us, .hours, .events, .faq, .newsletter {
+  padding: 3rem 2rem;
+  background: #fff;
+  margin-bottom: 1rem;
+}
+
+.special-grid, .gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.special-card, .gallery-box {
+  padding: 1.5rem;
+  background: #f9f9f9;
+  border-radius: 6px;
+}
+
+.gallery-box {
+  text-align: center;
+  font-weight: bold;
+}
+
+.footer {
+  background: #222;
+  color: white;
+  padding: 2rem;
+}
+
+.footer-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .special-grid, .gallery-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-grid {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
