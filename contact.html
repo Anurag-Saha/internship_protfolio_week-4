@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | ProServe Solutions</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <h1 class="logo">ProServe</h1>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="page-section">
+    <h2>Contact Us</h2>
+
+    <form id="contactForm" novalidate>
+      <label>
+        Name
+        <input type="text" id="name" required />
+      </label>
+
+      <label>
+        Email
+        <input type="email" id="email" required />
+      </label>
+
+      <label>
+        Message
+        <textarea id="message" required></textarea>
+      </label>
+
+      <button type="submit">Send Message</button>
+      <p id="formMessage" role="alert"></p>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 ProServe Solutions</p>
+</footer>
+
+</body>
+</html>

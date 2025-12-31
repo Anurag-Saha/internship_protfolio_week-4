@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background: #222;
+}
+
+.logo {
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 1rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  left: auto;
+  right: inherit;
+}
+
+.hero img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.hero-text {
+  padding: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+}
+
+.page-section {
+  padding: 2rem;
+}
+
+.feature-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.services-list {
+  list-style: square;
+  margin-left: 1.5rem;
+}
+
+form {
+  max-width: 400px;
+}
+
+label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+button {
+  padding: 0.7rem;
+  background: #28a745;
+  color: white;
+  border: none;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #222;
+  color: white;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .feature-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
