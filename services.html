@@ -8,7 +8,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar">
+      <nav class="navbar container">
         <h1 class="logo">Royal Spice</h1>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
@@ -20,47 +20,83 @@
       </nav>
     </header>
 
-    <main>
-      <section class="content">
-        <h2>Our Menu</h2>
+    <main class="page">
+      <div class="container">
+        <!-- ===== MENU SECTION ===== -->
+        <section class="service-section animate">
+          <h2 class="section-title">Our Menu</h2>
+          <p class="section-subtitle">
+            Carefully curated dishes prepared with authentic Indian spices.
+          </p>
 
-        <h3>Starters</h3>
-        <ul>
-          <li>Paneer Tikka – ₹250</li>
-          <li>Chicken Seekh Kebab – ₹320</li>
-          <li>Veg Samosa – ₹120</li>
-        </ul>
+          <div class="menu-grid">
+            <div class="menu-card">
+              <h3>🥗 Starters</h3>
+              <ul>
+                <li>Paneer Tikka <span>₹250</span></li>
+                <li>Chicken Seekh Kebab <span>₹320</span></li>
+                <li>Veg Samosa <span>₹120</span></li>
+              </ul>
+            </div>
 
-        <h3>Main Course</h3>
-        <ul>
-          <li>Butter Chicken – ₹420</li>
-          <li>Paneer Butter Masala – ₹380</li>
-          <li>Dal Makhani – ₹300</li>
-        </ul>
+            <div class="menu-card">
+              <h3>🍛 Main Course</h3>
+              <ul>
+                <li>Butter Chicken <span>₹420</span></li>
+                <li>Paneer Butter Masala <span>₹380</span></li>
+                <li>Dal Makhani <span>₹300</span></li>
+                <li>Hyderabadi Biryani <span>₹450</span></li>
+              </ul>
+            </div>
 
-        <h3>Desserts</h3>
-        <ul>
-          <li>Gulab Jamun – ₹150</li>
-          <li>Rasgulla – ₹140</li>
-        </ul>
-      </section>
+            <div class="menu-card">
+              <h3>🍰 Desserts</h3>
+              <ul>
+                <li>Gulab Jamun <span>₹150</span></li>
+                <li>Rasgulla <span>₹140</span></li>
+                <li>Kesar Kulfi <span>₹180</span></li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
-      <section class="content">
-        <h2>Book a Table</h2>
+        <!-- ===== BOOKING SECTION ===== -->
+        <section class="service-section animate">
+          <h2 class="section-title">Book a Table</h2>
+          <p class="section-subtitle">
+            Reserve your table in advance for a smooth dining experience.
+          </p>
 
-        <form id="bookingForm">
-          <input type="text" id="guestName" placeholder="Your Name" />
-          <input type="number" id="guests" placeholder="Number of Guests" />
-          <input type="date" id="date" />
-          <input type="time" id="time" />
-          <button type="submit">Book Now</button>
-          <p id="bookingMessage"></p>
-        </form>
-      </section>
+          <form id="bookingForm" class="booking-form">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" id="guestName" placeholder="Enter your name" />
+            </div>
+
+            <div class="form-group">
+              <label>Number of Guests</label>
+              <input type="number" id="guests" placeholder="e.g. 4" />
+            </div>
+
+            <div class="form-group">
+              <label>Date</label>
+              <input type="date" id="date" />
+            </div>
+
+            <div class="form-group">
+              <label>Time</label>
+              <input type="time" id="time" />
+            </div>
+
+            <button type="submit" class="book-btn">Book Now</button>
+            <p id="bookingMessage"></p>
+          </form>
+        </section>
+      </div>
     </main>
 
     <footer class="footer">
-      <div class="footer-grid">
+      <div class="container footer-grid">
         <div>
           <h3>Royal Spice</h3>
           <p>Authentic Indian cuisine served with love and tradition.</p>
@@ -76,8 +112,8 @@
 
         <div>
           <h3>Contact</h3>
-          <p>📞 +91 98765 xxxxx</p>
-          <p>📧 xxxxxxpice@gmail.com</p>
+          <p>📞 +91 98765 43210</p>
+          <p>📧 royalspice@gmail.com</p>
         </div>
       </div>
 
