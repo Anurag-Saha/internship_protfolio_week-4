@@ -293,7 +293,7 @@ body.dark .booking-form input {
   background: white;
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   max-width: 900px;
   margin: auto;
 }
@@ -305,4 +305,63 @@ body.dark .content-box {
 
 body.dark .section-subtitle {
   color: #bbb;
+}
+
+.content-box ul {
+  padding-left: 1.2rem;
+}
+
+.content-box li {
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+}
+
+/* ===== TESTIMONIALS ===== */
+.testimonials-grid {
+  display: grid;
+  gap: 25px;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 1.8rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.testimonial-card::before {
+  content: "“";
+  font-size: 4rem;
+  color: #8b0000;
+  position: absolute;
+  top: -15px;
+  left: 15px;
+  opacity: 0.15;
+}
+
+.testimonial-text {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.testimonial-name {
+  font-weight: 600;
+  text-align: right;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Dark mode */
+body.dark .testimonial-card {
+  background: #1e1e1e;
+}
+
+body.dark .testimonial-card::before {
+  color: #ffb4b4;
 }
